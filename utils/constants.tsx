@@ -4,39 +4,39 @@ import { FaPaw, FaMedal, FaGamepad } from 'react-icons/fa';
 
 export const topics = [
   {
-    name: 'coding',
+    name: 'código',
     icon: <BsCode />,
   },
   {
-    name: 'comedy',
+    name: 'comédia',
     icon: <BsEmojiSunglasses />,
   },
   {
-    name: 'gaming',
+    name: 'game',
     icon: <FaGamepad />,
   },
   {
-    name: 'food',
+    name: 'comida',
     icon: <GiCakeSlice />,
   },
   {
-    name: 'dance',
+    name: 'dança',
     icon: <GiGalaxy />,
   },
   {
-    name: 'beauty',
+    name: 'beleza',
     icon: <GiLipstick />,
   },
   {
-    name: 'animals',
+    name: 'animais',
     icon: <FaPaw />,
   },
   {
-    name: 'sports',
+    name: 'esportes',
     icon: <FaMedal />,
   },
 ];
 
-export const footerList1 = ['About', 'Newsroom', 'Store', 'Contact', 'Carrers', 'ByteDance', 'Creator Directory']
-export const footerList2 = [ 'TikTik for Good','Advertise','Developers','Transparency','TikTik Rewards' ]
-export const footerList3 = [ 'Help', 'Safety', 'Terms', 'Privacy', 'Creator Portal', 'Community Guidelines' ]
+export const footerList1 = ['Sobre', 'Noticias', 'Loja', 'Contato', 'Carreiras', 'ByteDance', 'Diretório do Criador']
+export const footerList2 = [ 'TikTik','Anunciar','Desenvolvedores','Transparência','TikTik Recompensas' ]
+export const footerList3 = [ 'Ajuda', 'Segurança', 'Termos', 'Privacidade', 'Portal do Criador', 'Diretrizes da Comunidade' ]
