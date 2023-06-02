@@ -85,7 +85,7 @@ const Upload = () => {
   };
 
   return (
-    <div className='flex w-full h-full absolute left-0 top-[60px] lg:top-[70px] mb-10 pt-10 lg:pt-20 bg-[#F8F8F8] justify-center'>
+    <div className='flex w-full h-full absolute left-0 top-[60px] lg:top-[70px] mb-10 pt-10 lg:pt-20 bg-[#F8F8F8] justify-center mobile:top-[97px] mobile:pl-[20%] min-[320px]:top-[70px] min-[375px]:pl-0'>
       <div className=' bg-white rounded-lg xl:h-[80vh] flex gap-6 flex-wrap justify-center items-center p-14 pt-6'>
         <div>
           <div>
@@ -136,7 +136,7 @@ const Upload = () => {
                       loop
                       src={videoAsset?.url}
                     />
-                    <div className=' flex justify-between gap-20'>
+                    <div className=' flex justify-between gap-20 mobile:pl-7'>
                       <p className='text-lg'>{videoAsset.originalFilename}</p>
                       <button
                         type='button'
@@ -157,7 +157,7 @@ const Upload = () => {
             </p>
           )}
         </div>
-        <div className='flex flex-col gap-3 pb-10'>
+        <div className='flex flex-col gap-3 pb-10 mobile:mt-[73px]'>
           <label className='text-md font-medium '>Titulo</label>
           <input
             type='text'

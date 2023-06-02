@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { GoVerified } from 'react-icons/go';
-import axios from 'axios';
+import axios from 'axios'
 
 import VideoCard from '../../components/VideoCard';
 import NoResults from '../../components/NoResults';
@@ -67,7 +67,7 @@ const Profile = ({ data }: IProps) => {
             Curtidos
           </p>
         </div>
-        <div className='flex gap-6 flex-wrap md:justify-start'>
+        <div className='flex gap-6 flex-wrap md:justify-start mobile:pb-7'>
           {videosList.length > 0 ? (
             videosList.map((post: Video, idx: number) => (
               <VideoCard key={idx} post={post} />
