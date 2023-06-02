@@ -29,6 +29,7 @@ module.exports = {
       },
       colors: {
         primary: 'rgb(22, 24, 35)',
+        bgDark: '#121212'
       },
       height: {
         '88vh': '88vh',
@@ -48,5 +49,5 @@ module.exports = {
     },
   },
   plugins: [],
-  darkMode: 'class'
+  darkMode: 'media'
 };

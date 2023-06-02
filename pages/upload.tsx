@@ -85,14 +85,14 @@ const Upload = () => {
   };
 
   return (
-    <div className='flex w-full h-full absolute left-0 top-[60px] lg:top-[70px] mb-10 pt-10 lg:pt-20 bg-[#F8F8F8] justify-center mobile:top-[97px] mobile:pl-[20%] min-[320px]:top-[70px] min-[375px]:pl-0'>
-      <div className=' bg-white rounded-lg xl:h-[80vh] flex gap-6 flex-wrap justify-center items-center p-14 pt-6'>
+    <div className='flex w-full h-full absolute left-0 top-[60px] lg:top-[70px] mb-10 pt-10 lg:pt-20 bg-[#F8F8F8] dark:bg-bgDark justify-center mobile:top-[97px] mobile:pl-[20%] min-[320px]:top-[70px] min-[375px]:pl-0'>
+      <div className=' bg-white dark:bg-bgDark rounded-lg xl:h-[80vh] flex gap-6 flex-wrap justify-center items-center p-14 pt-6'>
         <div>
           <div>
             <p className='text-2xl font-bold'>Upload Video</p>
             <p className='text-md text-gray-400 mt-1'>Poste um video</p>
           </div>
-          <div className=' border-dashed rounded-xl border-4 border-gray-200 flex flex-col justify-center items-center  outline-none mt-10 w-[260px] h-[458px] p-10 cursor-pointer duration-500 transitions-colors hover:border-[#F51997] hover:bg-gray-100'>
+          <div className=' border-dashed rounded-xl border-4 border-gray-200 dark:border-[#363636] flex flex-col justify-center items-center  outline-none mt-10 w-[260px] h-[458px] p-10 cursor-pointer duration-500 transitions-colors hover:border-[#F51997] hover:bg-gray-100'>
             {loading ? (
               <p className='text-center text-3xl text-red-400 font-semibold'>
                 Uploading...
@@ -163,7 +163,7 @@ const Upload = () => {
             type='text'
             value={caption}
             onChange={(e) => setCaption(e.target.value)}
-            className='rounded lg:after:w-650 outline-none text-md border-2 border-gray-200 p-2  duration-500 hover:border-[#F51997]'
+            className='rounded lg:after:w-650 outline-none text-md border-2 border-gray-200 dark:border-[#363636] p-2  duration-500 hover:border-[#F51997]'
           />
           <label className='text-md font-medium '>Escolha um tópico</label>
 
@@ -171,7 +171,7 @@ const Upload = () => {
             onChange={(e) => {
               setTopic(e.target.value);
             }}
-            className='outline-none lg:w-650 border-2 border-gray-200 text-md capitalize lg:p-4 p-2 rounded cursor-pointer duration-500 hover:border-[#F51997] hover:text-[#f51997]'
+            className='outline-none lg:w-650 border-2 border-gray-200 dark:border-[#363636] text-md capitalize lg:p-4 p-2 rounded cursor-pointer duration-500 hover:border-[#F51997] hover:text-[#f51997]'
           >
             {topics.map((item) => (
               <option
@@ -187,7 +187,7 @@ const Upload = () => {
             <button
               onClick={handleDiscard}
               type='button'
-              className='border-gray-300 border-2 text-md font-medium p-2 rounded w-28 lg:w-44 outline-none  duration-500 hover:border-[#F51997]'
+              className='border-gray-300 dark:border-[#363636] border-2 text-md font-medium p-2 rounded w-28 lg:w-44 outline-none  duration-500 hover:border-[#F51997]'
             >
               Descartar
             </button>

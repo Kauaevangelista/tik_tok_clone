@@ -9,11 +9,12 @@ const Discover: NextPage = () => {
   const router = useRouter();
   const { topic } = router.query;
 
-  const activeTopicStyle = 'xl:border-2 duration-500 hover:bg-primary xl:border-[#F51997] px-3 py-2 rounded xl:rounded-full flex items-center gap-2 justify-center cursor-pointer text-[#F51997]';
-  const topicStyle = 'xl:border-2 duration-500 hover:bg-primary hover:border-[#F51997] xl:border-gray-300 px-3 py-2 rounded xl:rounded-full flex items-center gap-2 justify-center cursor-pointer text-black';
+  const activeTopicStyle = 'xl:border-2 duration-500 hover:bg-primary dark:hover:bg-bgDark xl:border-[#F51997] dark:xl:border-[#F51997] px-3 py-2 rounded xl:rounded-full flex items-center gap-2 justify-center cursor-pointer text-[#F51997]';
+
+  const topicStyle = 'xl:border-2 duration-500 hover:bg-primary dark:hover:bg-bgDark hover:border-[#F51997] xl:border-gray-300 dark:xl:border-gray-300 px-3 py-2 rounded xl:rounded-full flex items-center gap-2 justify-center cursor-pointer dark:text-white text-black';
 
   return (
-    <div className='xl:border-b-2 xl:border-gray-200 pb-6'>
+    <div className='xl:border-b-2 dark:border-[#363636] xl:border-gray-200 xl:dark:border-[#363636] pb-6'>
       <p className='text-gray-500 font-semibold m-3 mt-4 hidden xl:block'>
         Tópicos Populares
       </p>

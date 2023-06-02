@@ -78,12 +78,12 @@ const Detail = ({ postDetails }: IProps) => {
   return (
     <>
       {post && (
-        <div className='flex w-full absolute left-0 top-0 flex-wrap lg:flex-nowrap lg:h-[130vh] bg-white'>
+        <div className='flex w-full absolute left-0 top-0 flex-wrap lg:flex-nowrap lg:h-[130vh] bg-white dark:bg-bgDark'>
           <div className='relative flex-2 w-[1000px] lg:w-9/12 flex justify-center items-center bg-black bg-no-repeat bg-cover bg-center'>
             <div className='opacity-90 absolute top-6 left-2 lg:left-6 flex gap-6 z-50'>
               <p className='cursor-pointer ' onClick={() => router.back()}>
                 <MdOutlineCancel className='text-white text-[35px] duration-700 hover:text-[#f51997]' />
-              </p>
+              </p> 
             </div>
             <div className='relative'>
               <div className='lg:h-[100vh] h-[60vh]'>
@@ -119,7 +119,7 @@ const Detail = ({ postDetails }: IProps) => {
           <div className='relative w-[1000px] md:w-[900px] lg:w-[700px] mobile:w-full'>
             <div className='h-[100%] mobile:pt-12'>
               <Link href={`/profile/${post.postedBy._id}`}>
-                <div className='flex gap-4 mb-4 bg-white w-full pl-10 flex-wrap cursor-pointer'>
+                <div className='flex gap-4 mb-4 bg-white dark:bg-bgDark w-full pl-10 flex-wrap cursor-pointer'>
                   <Image
                     width={60}
                     height={60}
@@ -128,7 +128,7 @@ const Detail = ({ postDetails }: IProps) => {
                     src={post.postedBy.image}
                   />
                   <div>
-                    <div className='text-xl font-bold lowercase tracking-wider flex gap-2 items-center justify-center'>
+                    <div className='text-xl font-bold lowercase tracking-wider flex gap-2 items-center justify-center dark:text-white'>
                       {post.postedBy.userName.replace(/\s+/g, '')}{' '}
                       <GoVerified className='text-blue-400 text-xl' />
                     </div>

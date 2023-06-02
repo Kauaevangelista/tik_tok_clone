@@ -26,7 +26,7 @@ const Comments = ({ comment, setComment, addComment, comments, isPostingComment 
   const { allUsers, userProfile }: any = useAuthStore();
 
   return (
-    <div className='border-t-2 border-gray-200 pt-4 px-10 mobile:px-[1rem] min-[320px]:px-[2rem] min-[328px]:px-[2.5rem] mt-4 bg-[#F8F8F8] border-b-2 lg:pb-0 pb-[100px]'>
+    <div className='border-t-2 border-gray-200 pt-4 px-10 mobile:px-[1rem] min-[320px]:px-[2rem] min-[328px]:px-[2.5rem] mt-4 bg-[#F8F8F8] dark:bg-bgDark border-b-2 lg:pb-0 pb-[100px]'>
       <div className='overflow-scroll lg:h-[355px] xl:h-[479px]'>
         {comments?.length > 0 ? (
           comments?.map((item: IComment, idx: number) => (
@@ -48,14 +48,14 @@ const Comments = ({ comment, setComment, addComment, comments, isPostingComment 
                             />
                           </div>
 
-                          <p className='flex cursor-pointer gap-1 items-center text-[18px] font-bold leading-6 text-primary'>
+                          <p className='flex cursor-pointer gap-1 items-center text-[18px] font-bold leading-6 text-primary dark:text-white'>
                             {user.userName}{' '}
                             <GoVerified className='text-blue-400' />
                           </p>
                         </div>
                       </Link>
                       <div>
-                        <p className='-mt-5 ml-16 text-[16px] mr-8'>
+                        <p className='-mt-5 ml-16 text-[16px] dark:text-white mr-8'>
                           {item.comment}
                         </p>
                       </div>
@@ -73,7 +73,7 @@ const Comments = ({ comment, setComment, addComment, comments, isPostingComment 
           <input
             value={comment}
             onChange={(e) => setComment(e.target.value)}
-            className='bg-primary duration-700 px-6 py-4 text-md font-medium border-2 w-[250px] md:w-[700px] lg:w-[350px] border-gray-100 outline-none focus:border-[#a00c60] flex-1 rounded-lg hover:border-[#f51997]'
+            className='bg-primary dark:bg-bgDark duration-700 px-6 py-4 text-md font-medium border-2 w-[250px] md:w-[700px] dark:text-white lg:w-[350px] border-gray-100 outline-none focus:border-[#a00c60] flex-1 rounded-lg hover:border-[#f51997]'
             placeholder='Adicionar comentário..'
           />
           <button className='text-md text-gray-400 duration-700 hover:text-[#f51997]' onClick={addComment}>

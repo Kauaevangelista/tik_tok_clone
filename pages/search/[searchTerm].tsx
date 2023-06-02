@@ -24,9 +24,9 @@ const Search = ({ videos }: { videos: Video[] }) => {
   
   return (
     <div className='w-full  '>
-      <div className='flex gap-10 mb-10 border-b-2 border-gray-200 md:fixed z-50 bg-white w-full'>
+      <div className='flex gap-10 mb-10 border-b-2 border-gray-200 md:fixed z-50 bg-white dark:bg-bgDark w-full'>
         <p onClick={() => setIsAccounts(true)} className={`text-xl  font-semibold cursor-pointer ${accounts} mt-2`}>
-          Contas
+          Accounts
         </p>
         <p className={`text-xl font-semibold cursor-pointer ${isVideos} mt-2`} onClick={() => setIsAccounts(false)}>
           Videos
