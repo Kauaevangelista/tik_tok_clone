@@ -15,22 +15,27 @@ const Home = ({ videos }: IProps) => {
     <div className='flex flex-col gap-10 videos h-full'>
       {videos.length 
         ? videos?.map((video: Video) => (
-          // <VideoCard post={video} isShowingOnHome key={video._id} />
-          <VideoCard post={video}/>
-        ))
-        : <NoResults text={`Sem Videos`}/>}
+          <VideoCard post={video} isShowingOnHome key={video._id} />
+        )) 
+        : <NoResults text={`No Videos`} />}
     </div>
   );
 };
 
 export default Home;
 
-export const getServerSideProps = async () => {
-  const { data } = await axios.get(`${BASE_URL}/api/post`)
+export const getServerSideProps = async ({
+  query: { topic },
+}: {
+  query: { topic: string };
+}) => {
+  let response = await axios.get(`${BASE_URL}/api/post`);
 
-  return {
-    props: {
-      videos: data
-    }
+  if(topic) {
+    response = await axios.get(`${BASE_URL}/api/discover/${topic}`);
   }
-}
+  
+  return {
+    props: { videos: response.data },
+  };
+};

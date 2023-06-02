@@ -78,11 +78,11 @@ const Detail = ({ postDetails }: IProps) => {
   return (
     <>
       {post && (
-        <div className='flex w-full absolute left-0 top-0 flex-wrap lg:flex-nowrap lg:h-[130vh] bg-white'>
-          <div className='relative flex-2 w-[1000px] lg:w-9/12 flex justify-center items-center bg-black bg-no-repeat bg-cover bg-center'>
+        <div className='flex w-full absolute left-0 top-0 bg-white flex-wrap lg:flex-nowrap'>
+          <div className='relative flex-2 w-[1000px] lg:w-9/12 flex justify-center items-center bg-blurred-img bg-no-repeat bg-cover bg-center'>
             <div className='opacity-90 absolute top-6 left-2 lg:left-6 flex gap-6 z-50'>
               <p className='cursor-pointer ' onClick={() => router.back()}>
-                <MdOutlineCancel className='text-white text-[35px] duration-700 hover:text-[#f51997]' />
+                <MdOutlineCancel className='text-white text-[35px] hover:opacity-90' />
               </p>
             </div>
             <div className='relative'>
@@ -99,7 +99,7 @@ const Detail = ({ postDetails }: IProps) => {
               <div className='absolute top-[45%] left-[40%]  cursor-pointer'>
                 {!isPlaying && (
                   <button onClick={onVideoClick}>
-                    <BsFillPlayFill className='text-white text-6xl lg:text-8xl duration-700 hover:text-[#f51997]' />
+                    <BsFillPlayFill className='text-white text-6xl lg:text-8xl' />
                   </button>
                 )}
               </div>
@@ -107,19 +107,19 @@ const Detail = ({ postDetails }: IProps) => {
             <div className='absolute bottom-5 lg:bottom-10 right-5 lg:right-10  cursor-pointer'>
               {isVideoMuted ? (
                 <button onClick={() => setIsVideoMuted(false)}>
-                  <HiVolumeOff className='text-white text-3xl lg:text-4xl duration-700 hover:text-[#f51997]' />
+                  <HiVolumeOff className='text-white text-3xl lg:text-4xl' />
                 </button>
               ) : (
                 <button onClick={() => setIsVideoMuted(true)}>
-                  <HiVolumeUp className='text-white text-3xl lg:text-4xl duration-700 hover:text-[#f51997]' />
+                  <HiVolumeUp className='text-white text-3xl lg:text-4xl' />
                 </button>
               )}
             </div>
           </div>
-          <div className='relative w-[1000px] md:w-[900px] lg:w-[700px] mobile:w-full'>
-            <div className='h-[100%] mobile:pt-12'>
+          <div className='relative w-[1000px] md:w-[900px] lg:w-[700px]'>
+            <div className='lg:mt-20 mt-10'>
               <Link href={`/profile/${post.postedBy._id}`}>
-                <div className='flex gap-4 mb-4 bg-white w-full pl-10 flex-wrap cursor-pointer'>
+                <div className='flex gap-4 mb-4 bg-white w-full pl-10 cursor-pointer'>
                   <Image
                     width={60}
                     height={60}
@@ -137,9 +137,9 @@ const Detail = ({ postDetails }: IProps) => {
                 </div>
               </Link>
               <div className='px-10'>
-                <p className=' text-lg text-gray-600'>{post.caption}</p>
+                <p className=' text-md text-gray-600'>{post.caption}</p>
               </div>
-              <div className='px-10 mobile:mt-0 lg:mt-10'>
+              <div className='mt-10 px-10'>
                 {userProfile && <LikeButton
                   likes={post.likes}
                   flex='flex'
